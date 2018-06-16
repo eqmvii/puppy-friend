@@ -1,6 +1,8 @@
 # Puppy Friend
 
-A puppy friend finder built with React
+A puppy friend finder built with React. Gets random dog images from Dog CEO and has a breed search feature.
+
+Build to learn/test/tinker with React and React Router.
 
 # Create React App
 

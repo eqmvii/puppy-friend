@@ -12,7 +12,7 @@ const Test = props => (
           <strong>Name:</strong> {props.name}
         </li>
         <li>
-          <strong>Snuggly:</strong> {props.snugfactor}
+          <strong>Snuggle Factor:</strong> {props.snugfactor}
         </li>
       </ul>
     </div>
