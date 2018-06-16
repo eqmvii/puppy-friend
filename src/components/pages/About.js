@@ -1,4 +1,5 @@
 import React from "react";
+import Test from "../Test";
 
 const About = () => (
   <div>
@@ -10,6 +11,8 @@ const About = () => (
       imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus in. Sed rhoncus mollis
       diam, sit amet facilisis lectus blandit at.
     </p>
+    <Test name="puppo" snugfactor={6} />
+    <Test name="mister pup" snugfactor={3} />
   </div>
 );
 

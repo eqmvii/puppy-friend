@@ -8,7 +8,6 @@ import './App.css';
 // COMPONENTS
 //
 
-import Test from "./components/Test";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Discover from "./components/pages/Discover";
@@ -28,8 +27,6 @@ class App extends Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/discover" component={Discover} />
           <Route path="/search" component={Search} />
-          <Test name="puppo" snugfactor={6} />
-          <Test name="mister pup" snugfactor={3} />
         </div>
       </Router>
     );

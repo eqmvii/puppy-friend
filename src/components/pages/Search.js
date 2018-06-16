@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-// const Search = () => (
-//   <div>
-//     <h1>Search For Doggos
-//     </h1>
-//   </div>
-// );
-
 class Search extends Component {
   state = {
     term: "",
@@ -33,14 +26,11 @@ class Search extends Component {
       .catch(function (error) {
         console.log(error);
       });
-    // API.search(query)
-    //   .then(res => this.setState({ results: res.data.data }))
-    //   .catch(err => console.log(err));
   };
 
   handleSearchSubmit = event => {
     event.preventDefault();
-    alert(`Searching for: ${this.state.term}`);
+    console.log(`Searching for: ${this.state.term}`);
     this.searchPuppies(this.state.term);
     this.setState({ term: "" });
 
