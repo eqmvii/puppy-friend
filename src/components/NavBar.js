@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavTabs = () => (
+const NavBar = () => (
   <ul className="nav nav-tabs">
     <li className="nav-item">
       <Link
@@ -46,4 +46,4 @@ const NavTabs = () => (
   </ul>
 );
 
-export default NavTabs;
+export default NavBar;

@@ -1,0 +1,83 @@
+[1mdiff --git a/src/App.js b/src/App.js[m
+[1mindex 59743cc..d76e83a 100644[m
+[1m--- a/src/App.js[m
+[1m+++ b/src/App.js[m
+[36m@@ -1,13 +1,13 @@[m
+ import React, { Component } from 'react';[m
+ // import logo from './logo.svg';[m
+ import { BrowserRouter as Router, Route } from "react-router-dom";[m
+[31m-import NavTabs from "./components/NavTabs";[m
+ import './App.css';[m
+ [m
+ //[m
+ // COMPONENTS[m
+ //[m
+ [m
+[32m+[m[32mimport NavBar from "./components/NavTabs";[m
+ import Home from "./components/pages/Home";[m
+ import About from "./components/pages/About";[m
+ import Discover from "./components/pages/Discover";[m
+[36m@@ -22,7 +22,7 @@[m [mclass App extends Component {[m
+     return ([m
+       <Router>[m
+         <div>[m
+[31m-          <NavTabs />[m
+[32m+[m[32m          <NavBar />[m
+           <Route exact path="/" component={Home} />[m
+           <Route exact path="/about" component={About} />[m
+           <Route exact path="/discover" component={Discover} />[m
+[1mdiff --git a/src/components/NavTabs.js b/src/components/NavTabs.js[m
+[1mdeleted file mode 100644[m
+[1mindex ca46d12..0000000[m
+[1m--- a/src/components/NavTabs.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,49 +0,0 @@[m
+[31m-import React from "react";[m
+[31m-import { Link } from "react-router-dom";[m
+[31m-[m
+[31m-const NavTabs = () => ([m
+[31m-  <ul className="nav nav-tabs">[m
+[31m-    <li className="nav-item">[m
+[31m-      <Link[m
+[31m-        to="/"[m
+[31m-        className={[m
+[31m-          window.location.pathname === "/" ? "nav-link active" : "nav-link"[m
+[31m-        }[m
+[31m-      >[m
+[31m-        Home[m
+[31m-      </Link>[m
+[31m-    </li>[m
+[31m-    <li className="nav-item">[m
+[31m-      <Link[m
+[31m-        to="/about"[m
+[31m-        className={[m
+[31m-          window.location.pathname === "/about" ? "nav-link active" : "nav-link"[m
+[31m-        }[m
+[31m-      >[m
+[31m-        About[m
+[31m-      </Link>[m
+[31m-    </li>[m
+[31m-    <li className="nav-item">[m
+[31m-      <Link[m
+[31m-        to="/discover"[m
+[31m-        className={[m
+[31m-          window.location.pathname === "/discover" ? "nav-link active" : "nav-link"[m
+[31m-        }[m
+[31m-      >[m
+[31m-        Discover[m
+[31m-      </Link>[m
+[31m-    </li>[m
+[31m-    <li className="nav-item">[m
+[31m-      <Link[m
+[31m-        to="/search"[m
+[31m-        className={[m
+[31m-          window.location.pathname === "/search" ? "nav-link active" : "nav-link"[m
+[31m-        }[m
+[31m-      >[m
+[31m-        Search[m
+[31m-      </Link>[m
+[31m-    </li>[m
+[31m-  </ul>[m
+[31m-);[m
+[31m-[m
+[31m-export default NavTabs;[m
