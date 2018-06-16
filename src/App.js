@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import NavTabs from "./components/NavTabs";
 import './App.css';
 
 //
@@ -7,6 +9,10 @@ import './App.css';
 //
 
 import Test from "./components/Test";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Discover from "./components/pages/Discover";
+import Search from "./components/pages/Search";
 
 //
 // APP
@@ -15,15 +21,17 @@ import Test from "./components/Test";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Puppy Friend</h1>
-        </header>
-        <Test name="puppo" snugfactor={6} />
-        <Test name="mister pup" snugfactor={3} />
-
-      </div>
+      <Router>
+        <div>
+          <NavTabs />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/discover" component={Discover} />
+          <Route path="/search" component={Search} />
+          <Test name="puppo" snugfactor={6} />
+          <Test name="mister pup" snugfactor={3} />
+        </div>
+      </Router>
     );
   }
 }
